@@ -9,7 +9,8 @@ class Solution:
                 return digits
             
             digits[i] = 0
-
+        
+        # to handle array like [9,9,9] to [1,0,0,0]
         return [1] + digits
 
 
