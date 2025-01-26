@@ -1,10 +1,10 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        closeToOpen = {")":"(", "}":"{", "]":"["}
+        closeToOpen = { ")":"(", "}":"{", "]":"[" }
 
         for i in s:
-            if i in closeToOpen:
+            if i in closeToOpen:  # checks if the current character i is a closing bracket (i.e., one of ")", "}", or "]").
                 if stack and stack[-1] == closeToOpen[i]:
                     stack.pop()
                 else:
@@ -17,6 +17,5 @@ class Solution:
         else:
             return True
 
-sol = Solution()
-#sol.isValid('({[]})')
+sol = Solution() 
 print(sol.isValid('({[]})'))
