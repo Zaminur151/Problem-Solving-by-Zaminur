@@ -10,5 +10,4 @@ my_stack = Stack()
 
 print(my_stack.values)
 my_stack.Push(5)
-my_stack.Push(5)
 print(my_stack.values)

@@ -4,6 +4,7 @@ from typing import List
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
 
+        # Hash Map approch. time complexity of this approach is O(n)
         seen = set()
         for i in nums:
             if i in seen:
@@ -11,7 +12,7 @@ class Solution:
             seen.add(i)
         return False
 
-        # time complexity of this approach is O(n log n)
+        # shorting approach. time complexity of this approach is O(n log n)
         """        
         nums.sort()
         for i in range(1, len(nums)-1):
